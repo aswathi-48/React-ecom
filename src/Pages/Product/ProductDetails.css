@@ -1,0 +1,40 @@
+.view_Product {
+    background-color: whitesmoke;
+}
+.view_Product h1 {
+    margin: 0px;
+    padding: 20px;
+    text-decoration: underline;
+    padding-left: 28%;
+}
+.products {
+    display: flex;
+    justify-content: center;
+}
+
+.product_img img {
+    width: 400px;
+    padding: 50px;
+}
+.product_Dettails {
+    /* padding-left: 300px; */
+    padding-top: 12%;
+}
+.buttons button{
+    /* padding: 13px; */
+    margin: 10px;
+    width: 120px;
+    height: 5vh;
+    border: none;
+    outline: none;
+    background-color: rgb(0, 110, 255);
+    border-radius: 5px;
+    color: white;
+}
+.buttons button:hover {
+    color: black;
+    background-color: whitesmoke;
+}
+.buttons {
+    /* margin: 10px; */
+}

@@ -1,0 +1,17 @@
+.product h1 {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    margin: 0;
+}
+.card_container {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    gap: 25px;
+    padding:  10px 20px;
+    padding-bottom: 10%;
+}
+.all_product {
+    background-color: whitesmoke;
+}
+

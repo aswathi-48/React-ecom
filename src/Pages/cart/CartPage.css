@@ -1,0 +1,31 @@
+.all_detail {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10%;
+}
+.cart_container h1 {
+    /* display: flex; */
+    padding-left: 29%;
+    padding-bottom: 40px;
+    text-decoration: underline;
+
+}
+.details {
+    padding-top: 10%;
+}
+.buy_btn  {
+    border: none;
+    outline: none;
+    background: none;
+    width: 200px;
+    margin-top: 40px;
+    background-color: rgb(0, 110, 255);
+    height: 40px;
+    color: white;
+    border-radius: 10px;
+}
+.buy_btn:hover {
+    color: black;
+    background-color: whitesmoke;
+}

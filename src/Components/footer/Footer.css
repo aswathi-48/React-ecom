@@ -1,0 +1,18 @@
+.footer-contents {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+}
+.footer {
+    background-color: black;
+    color: white;
+}
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.list {
+    display: flex;
+    gap: 25px;
+}
