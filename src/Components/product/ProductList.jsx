@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -21,6 +21,10 @@ const ProductList = () => {
         }
         fetchData();
     }, []);
+
+    const {isLogin} = useContext()
+    console.log(isLogin, 'is login')
+
     return (
         <div className='all_product'>
             <div className="product">

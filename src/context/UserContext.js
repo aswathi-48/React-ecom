@@ -2,7 +2,7 @@ import { createContext } from "react"
 
 
 
-const UserContext = createContext()
+const UserContext = createContext({isLogin: false})
 
 export default UserContext
 

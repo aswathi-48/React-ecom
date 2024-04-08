@@ -26,10 +26,10 @@ function App() {
 
   
   return (
+     <UserContext.Provider value={{ isLogin: "true" }}>
     <div className="App">
 
      <BrowserRouter>
-     <UserContext.Provider value={{ isLogin: true }}>
      <Layout>
       <Routes>
         <Route path="/" element={<ProductList/>}/>
@@ -38,9 +38,9 @@ function App() {
         <Route path="/cart/:id" element={<CartPage/>}/>
       </Routes>
      </Layout>
-     </UserContext.Provider>
      </BrowserRouter>
     </div>
+     </UserContext.Provider>
   );
 }
 
