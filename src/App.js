@@ -6,27 +6,37 @@ import Main from "./Components/Main/Main";
 import Login from "./Components/Login/Login";
 import { ProductDetails } from "./Pages/Product/ProductDetails";
 import CartPage from "./Pages/cart/CartPage";
-
 import { useEffect, useState } from "react";
 import UserContext from "./context/UserContext";
 // import product from './Components/product/ProductList.jsx'
 
+
 function App() {
+
+  const [isLogin, setIsLoggedIn] = useState("");
+  const value = { isLogin, setIsLoggedIn };
   // const [isLogin, setIsLoggedIn] = useState(false);
 
-  // const accessToken = localStorage.getItem('accessToken');
-  
-  // useEffect(() => {
-  //   console.log("testing");
-  //   // setIsLoggedIn(accessToken !== null);
-  //   if(accessToken){
-  //     setIsLoggedIn(true)
-  //   }
-  // },[accessToken]);
+  const accessToken = localStorage.getItem('accessToken');
+
+  // const login = () => {
+  //   setIsLoggedIn(true)
+  // };
+
+  // const login {isLogin,setIsLoggedIn};
+  useEffect(() => {
+    console.log("testing");
+    setIsLoggedIn(accessToken !== null);
+    // if(accessToken){
+    //   setIsLoggedIn(true)
+    // }
+  },[accessToken]);
 
   
   return (
-     <UserContext.Provider value={{ isLogin: "true" }}>
+    //  <UserContext.Provider value={{ isLogin, setIsLoggedIn: () => {} }}>
+    <UserContext.Provider value={value}>
+
     <div className="App">
 
      <BrowserRouter>

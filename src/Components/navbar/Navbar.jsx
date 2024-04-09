@@ -1,18 +1,25 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './Navbar.css';
 import logo from '../../utils/image/Untitled_design-removebg-preview.png';
 import { Link } from 'react-router-dom';
+import UserContext from '../../context/UserContext';
 
 const Navbar = () => {
   
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  useEffect(() => {
-    console.log("testing");
-    const accessToken = localStorage.getItem('accessToken');
-    setIsLoggedIn(accessToken !== null);
-  },[isLoggedIn]);
+  // useEffect(() => {
+  //   console.log("testing");
+  //   const accessToken = localStorage.getItem('accessToken');
+  //   setIsLoggedIn(accessToken !== null);
+  // },[isLoggedIn]);
+
+  const {isLogin,setIsLoggedIn} = useContext(UserContext)
+
+  useEffect (()=>{
+    console.log("islogin" ,isLogin);
+  },[isLogin])
 
 
   const handleLogout = () => {
@@ -30,7 +37,7 @@ const Navbar = () => {
             <img src={logo} alt="logo" />
           </div>
           <div className="logins">
-            {isLoggedIn ? (
+            {isLogin ? (
               <button onClick={handleLogout}>Logout</button>
             ) : (
               <Link to="/login" style={{textDecoration:"none"}}> <h3>Login</h3> </Link>

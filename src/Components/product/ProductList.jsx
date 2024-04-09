@@ -22,8 +22,6 @@ const ProductList = () => {
         fetchData();
     }, []);
 
-    const {isLogin} = useContext()
-    console.log(isLogin, 'is login')
 
     return (
         <div className='all_product'>

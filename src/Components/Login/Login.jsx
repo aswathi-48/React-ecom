@@ -4,19 +4,21 @@ import { HiOutlineMail } from "react-icons/hi";
 import { CgGirl } from "react-icons/cg";
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
+import UserContext from '../../context/UserContext';
 
 const Login = () => {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
-  const [isLoggedIn, setIsLoggedIn] = useState(false); 
+  // const [isLoggedIn, setIsLoggedIn] = useState(false); 
+  const { setIsLoggedIn } = useContext(UserContext)
 
   const handleLogin = (e) => {
     e.preventDefault();
     // Hardcoded default username and password
     const defaultuserName = 'abhi';
-    const defaultPassword = 'abi123';
+    const defaultPassword = '1234';
     const defaultAccessToken = 'default_access_token_1234';
 
 
@@ -24,6 +26,7 @@ const Login = () => {
       defaultuserName,
       defaultPassword
     }
+
 
 
     if (userName === defaultuserName && password === defaultPassword) {
@@ -37,7 +40,7 @@ const Login = () => {
     }
   };
 
-  // const { isLoign } = useContext()
+
   // console.log(isLoign, 'is login')
 
   return (
